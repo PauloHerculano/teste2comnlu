@@ -45,12 +45,11 @@ var cont = content;
 var res = "Erro";
 const analyzeParams = {
   'features': {
-        'sentiment': {
+    'sentiment': {
       'targets': [
-        'nba'
+        'stocks'
       ]
-    'relations': {}
-      
+    }
   },
   'text': cont
 };
