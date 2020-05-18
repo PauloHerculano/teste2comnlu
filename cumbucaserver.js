@@ -1,19 +1,30 @@
 const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
 const { IamAuthenticator } = require('ibm-watson/auth');
+const path = require("path");
+const express = require('express');
+const bodyParser = require('body-parser');
+
 var express = require('express');
-var cors = require('cors')
 var app = express();
 var content;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
 
-var corsOptions = {
-  origin: '*',
-  optionsSuccessStatus: 204, // some legacy browsers (IE11, various SmartTVs) choke on 204
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  preflightContinue: false,
-}
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PATCH, PUT, DELETE, OPTIONS, PUSH, LISTEN"
+    );
+    next();
+  });
 
-app.get('/nlu', cors(corsOptions), async function (req, res) {
+app.get('/nlu', async function (req, res) {
   content = req.query.text;
   var result = await analyzer(content);
   res.send(result);
