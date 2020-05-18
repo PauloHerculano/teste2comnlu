@@ -48,7 +48,7 @@ const analyzeParams = {
   'features': {
     'sentiment': {
       'targets': [
-        'stocks'
+        'nba'
       ]
     }
   }
