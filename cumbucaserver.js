@@ -44,16 +44,16 @@ async function analyzer(content){
 var cont = content;
 var res = "Erro";
 const analyzeParams = {
+  'url': content,
   'features': {
     'sentiment': {
       'targets': [
         'stocks'
       ]
     }
-  },
-  'text': cont
+  }
 };
-
+    
 await naturalLanguageUnderstanding.analyze(analyzeParams)
   .then(analysisResults => {
 
