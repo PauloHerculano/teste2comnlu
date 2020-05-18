@@ -5,7 +5,8 @@
   "main": "cumbucaserver.js",
   "dependencies": {
     "express": "^4.17.1",
-    "ibm-watson": "^5.5.0"
+    "ibm-watson": "^5.5.0",
+    "cors": "^2.8.5"
   },
   "devDependencies": {},
   "scripts": {
