@@ -1,0 +1,17 @@
+{
+  "name": "testeopenshift",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cumbucaserver.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ibm-watson": "^5.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node cumbucaserver",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
