@@ -45,7 +45,9 @@ var cont = content;
 var res = "Erro";
 const analyzeParams = {
   'features': {
+    'sentiment': true,
     'relations': {}
+      
   },
   'text': cont
 };
