@@ -3,7 +3,6 @@ const { IamAuthenticator } = require('ibm-watson/auth');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-var express = require('express');
 var app = express();
 var content;
 
