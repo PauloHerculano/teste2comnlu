@@ -45,7 +45,10 @@ var cont = content;
 var res = "Erro";
 const analyzeParams = {
   'features': {
-    'sentiment': true,
+        'sentiment': {
+      'targets': [
+        'nba'
+      ]
     'relations': {}
       
   },
