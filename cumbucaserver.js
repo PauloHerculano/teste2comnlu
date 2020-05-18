@@ -1,6 +1,5 @@
 const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
 const { IamAuthenticator } = require('ibm-watson/auth');
-const path = require("path");
 const express = require('express');
 const bodyParser = require('body-parser');
 
