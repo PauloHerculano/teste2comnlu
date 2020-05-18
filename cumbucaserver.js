@@ -5,9 +5,15 @@ var cors = require('cors')
 var app = express();
 var content;
 
-app.use(cors())
 
-app.get('/nlu', async function (req, res) {
+var corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 204, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+}
+
+app.get('/nlu', cors(corsOptions), async function (req, res) {
   content = req.query.text;
   var result = await analyzer(content);
   res.send(result);
