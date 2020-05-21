@@ -35,9 +35,9 @@ app.listen(3000, function () {
 const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
   version: '2019-07-12',
   authenticator: new IamAuthenticator({
-    apikey: 'IMinyq6Z_c_7CebAulM_Mi4fP7JDbMUr5g8hWQYZx_kR',
+    apikey: 'YOUR KEY',
   }),
-  url: 'https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/699e499c-020f-441c-8fc9-693b902b0325',
+  url: 'YOUR URL',
 });
 
 async function analyzer(content){
